@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-	 
+	 AWS_REGION='us-east-2'
     }
     
     tools {

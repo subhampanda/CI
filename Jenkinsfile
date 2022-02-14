@@ -22,7 +22,14 @@ pipeline {
         }
         stage ("terraform init") {
             steps {
-                sh 'terraform init'
+                 genericBuild(
+                    image: 'hashicorp/terraform:latest',
+                    aws: [
+                        roleAccount:"${AWS_ACCOUNT}",
+                        role: "${AWS_ROLE}",
+                        region: "${AWS_REGION}"
+                    ]
+                 )
             }
         }
         stage ("terraform fmt") {

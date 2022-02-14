@@ -23,7 +23,8 @@ pipeline {
         }
         stage ("terraform init") {
             steps {
-               image: 'hashicorp/terraform:latest',
+               
+	       cmd:'terraform init'       
             }
         }
         stage ("terraform fmt") {

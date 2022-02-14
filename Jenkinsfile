@@ -24,7 +24,7 @@ pipeline {
         stage ("terraform init") {
             steps {
                
-	       cmd:'terraform init'       
+	       sh 'terraform init  && \ terraform destory '        '       
             }
         }
         stage ("terraform fmt") {

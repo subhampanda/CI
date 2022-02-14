@@ -1,7 +1,14 @@
 pipeline {
     agent any
     environment {
-	 AWS_REGION='us-east-2'
+	
+	   AWS_ROLE = "subham-cicd-jenkins"
+           AWS_REGION='us-east-2'
+           AWS_ACCOUNT = '947666650043'
+           AWS_ENVIRONMENT = "preprod"
+           STACK_NAME = "test"
+	   APP_NAME = 'my-dbname'
+	   STATE_BUCKET_PREFIX='mysubhambucket'   
     }
     
     tools {

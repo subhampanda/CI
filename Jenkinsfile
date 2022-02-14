@@ -23,10 +23,7 @@ pipeline {
         }
         stage ("terraform init") {
             steps {
-                 genericBuild(
-                    image: 'hashicorp/terraform:latest'
-                    
-                 )
+               sh  'terraform init'
             }
         }
         stage ("terraform fmt") {

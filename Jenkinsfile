@@ -1,5 +1,3 @@
-@Library('cop-pipeline-step') _
-@Library('cop-pipeline-bootstrap') __
 
 pipeline {
     agent any
